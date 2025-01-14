@@ -1,4 +1,6 @@
 
+/* He utilizado la regla 1 para la aplicación de la fuente en todo el documento */
+
 * {
   font-family: "Raleway", serif;
   font-optical-sizing: auto;
@@ -6,14 +8,7 @@
   font-style: normal;
 }
 
-
-h1 {
-
-    text-align: center;
-    text-decoration: underline;
-    color:lightseagreen;
-
-}
+/* Regla número 2, aplicando en el body un margin 0% y sus paddings para la correcta estructuración del contenido */
 
 body {
 
@@ -23,12 +18,96 @@ body {
 
 }
 
+/* Regla número 3, insertando en los h1 su text-decoration: underline, para el subrallado y con el color darkcyan, aplicando también que estén alineados al centro con text-align:center. */
+
+h1 {
+
+    text-align: center;
+    text-decoration: underline;
+    color:darkcyan;
+
+}
+
+/* Regla número 4, los selectors deberán de contener el color lightcyan */
+/* Regla número 7, hay etiquetas de h2 que contienen la clase "selector", así que como todos los "selector" están dentro de un h2, los he implementado directamente al selector en vez de crear más líneas de código, he implementado su fondo de darkcyan (background-color:darkcyan;), su borde redondeado (border-radius: 5%;) y su relleno del 1% (padding: 1%;). */
+
+.selector {
+
+    background-color:darkcyan;
+    border-radius: 5%;
+    color: lightcyan;
+    padding: 1%;
+
+}
+
+/* Regla número 5, Los selectors contendrán un relleno del 5% (padding=5%), un borde sólido con el color darkcyan y esquinas redondeadas con un 5%.*/
+
 .selectors {
 
+    padding: 5%;
     border: 1px solid darkcyan;
     border-radius: 5%;
 
 }
+
+/* Regla número 6, el id universal se le aplicará el color lightgoldenrodyellow */
+
+#universal {
+
+    color: lightgoldenrodyellow;
+
+}
+
+/* Regla número 8, los span contendrán una fuente de 900, con un fondo de color negro y su texto en blanco. */
+
+span {
+
+    font-weight: 900;
+    background-color: black;
+    color: white;
+
+}
+
+/* Regla número 9, los elementos "a" que sean hijos directos de algún "li", permanecerán con la decoración del texto en valor: none. */
+
+li > a {
+
+    text-decoration: none;
+
+}
+
+/* Regla número 10, h3 contendrá un color de fondo que será: rgba(0, 139, 139, 0.529);, un relleno del 0.5% y esquinas redondeadas con el valor de 2px. */
+
+h3 {
+
+    background-color:rgba(0, 139, 139, 0.529);
+    padding: 0.5%;
+    border-radius: 5%;
+    
+
+}
+
+/* Regla número 11, todos los "div" que sean descendientes de un elemento con id "gallery" tendrán un width del 100% */
+/* En este caso les he aplicado directamente a todos los "img" un ancho del 100% con un borde, si solo queremos aplicar en el id "gallery" un width del 100%, aplicaríamos el siguiente código:
+
+#gallery > div {
+
+    width: 100%;
+
+}
+*/
+
+/* Regla número 12, los elementos img tendrá un ancho del 100% (width), un borde de color darkcyan, y esquinas redondeadas del 5% */
+
+img {
+
+    width: 100%;
+    border: 1px solid darkcyan;
+    border-radius: 5%;
+
+}
+
+/* A partir de este punto, todo lo demás es adicional que he puesto para que se parezca lo máximo posible a la página solicitada, también añadiendo el estilo de la tabla. */
 
 .content_selectors {
 
@@ -48,46 +127,6 @@ body {
 
 }
 
-.selector {
-
-    background-color:darkcyan;
-    border: 1px solid darkcyan;
-    border-radius: 2%;
-    color: aliceblue;
-    padding: 1%;
-
-}
-
-span {
-
-    background-color: black;
-    color: white;
-
-}
-
-.content_selectors a {
-
-    color: blue;
-    text-decoration: none;
-
-}
-
-h3 {
-
-    background-color:cadetblue;
-    padding: 1%;
-    border-radius: 2%;
-    
-
-}
-
-img {
-
-    width: 100%;
-    border: 1px solid darkcyan;
-    border-radius: 2%;
-
-}
 
 article {
 
@@ -100,7 +139,7 @@ table {
 
     border:  1px solid grey;
     margin: 1%;
-    width: 100%;
+    width: 98%;
 
 }
 
@@ -112,12 +151,20 @@ table {
 
 td {
     padding: 1%;
-    font-size: 90%;
+    font-size: 100%;
     width: 33%;
 }
 
 .different_line{
 
     background-color:rgb(230, 233, 235);
+
+}
+
+th {
+
+    font-weight: 900;
+    font-size: 150%;
+    padding: 1%;
 
 }
